@@ -1,7 +1,7 @@
 import { useState } from "react"
 import GenderCheckbox from "./genderCheckbox"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { useNavigate,Link } from "react-router-dom"
 import useSignup from "../components/hooks/useSignup"
 
 export default function SignUp(){
@@ -87,9 +87,9 @@ export default function SignUp(){
                           className="input input-bordered input-secondary w-full max-w-xs" />
                     </div>
                     <GenderCheckbox handelGender={handelGender}/>
-                    <a className="text-sm hover:underline hover:text-blue-600 mt-4 inline-block">
+                   <Link to="/login"><a className="text-sm hover:underline hover:text-blue-600 mt-4 inline-block">
                         already have account
-                    </a>
+                    </a></Link> 
                     <div>
                     <button className="btn btn-block btn-sm mt-2 border border-slate-700">submit</button>
                     </div>
